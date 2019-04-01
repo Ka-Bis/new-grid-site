@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3, h4 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	color: #787878;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+	line-height: 1.5em;
+    color: #787878;
+}
+
+.grid-container-body {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: auto;
+	grid-template-areas: 	"bg-img content";
+	grid-column-gap: 50px;
+}
+
+.bg-image {
+	grid-area: bg-img;
+	background-image: url(../image/moutain2.jpeg);
+	background-position: right;
+    background-size: cover;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll, fixed;
+    height: 100%;
+}
+
+.content {
+	grid-area: content;
+    background-color: #fff;
+    margin-right: 10%;
+}
+
+.grid-container-content {
+    display: grid;
+    grid-template-rows: 200px 1fr 200px 200px;
+    grid-template-areas: 	"intro"
+    						"img"
+    						"blog-article"
+    						"contact";
+  	margin-top: 15%;
+}
+
+.intro {
+	grid-area: intro;
+	text-align: justify;
+}
+
+.intro h2 {
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+.image-content {
+    grid-area: img;
+}
+
+.grid-container-img {
+    display: grid;
+    grid-template-rows: repeat(3,minmax(1fr,auto));
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 	"img1 img2"
+    						"img3 img4"
+    						"img5 img6";
+}
+
+.grid-container-img a {
+	color: 
+}
+
+.img img {
+    display:block;
+    height: 70%;
+    width: 80%;
+    border-radius: 10px; 
+    margin: auto;
+}
