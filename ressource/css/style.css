@@ -1,3 +1,16 @@
+/*SUMMARY 
+
+    1- GENERAL
+    2- BACKGROUND IMAGE
+    3- INTRO
+    4- IMAGE
+    5- BLOG ARTICLE
+    6-CONTACT
+
+*/
+
+/* 1- GENERAL */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -26,19 +39,42 @@ p {
 	grid-column-gap: 50px;
 }
 
+/*2- BACKGROUND IMAGE*/
+
 .bg-image {
 	grid-area: bg-img;
-	background-image: url(../image/moutain2.jpeg);
-	background-position: right;
+	background-image: url(../image/bg.jpg);
+	background-position: top;
     background-size: cover;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
+    /*background-size: auto 100%;*/
+    /*background-repeat: no-repeat;*/
     background-attachment: scroll, fixed;
     height: 100%;
+
 }
 
+.bg-image h1 {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.35em;
+    line-height: 1.75em;
+    /*margin: 0;*/
+    text-align:right;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    color:white;
+    position: fixed;
+}
+
+/*3- INTRO*/
+
 .content {
-	grid-area: content;
+    grid-area: content;
     background-color: #fff;
     margin-right: 10%;
 }
@@ -46,11 +82,11 @@ p {
 .grid-container-content {
     display: grid;
     grid-template-rows: 200px 1fr 200px 200px;
-    grid-template-areas: 	"intro"
-    						"img"
-    						"blog-article"
-    						"contact";
-  	margin-top: 15%;
+    grid-template-areas:    "intro"
+                            "img"
+                            "blog-article"
+                            "contact";
+    margin-top: 15%;
 }
 
 .intro {
@@ -62,6 +98,8 @@ p {
     font-size: 2em;
     line-height: 1.5em;
 }
+
+/*4- IMAGE*/
 
 .image-content {
     grid-area: img;
@@ -76,9 +114,6 @@ p {
     						"img5 img6";
 }
 
-.grid-container-img a {
-	color: 
-}
 
 .img img {
     display:block;
@@ -86,4 +121,8 @@ p {
     width: 80%;
     border-radius: 10px; 
     margin: auto;
+}
+
+.img img p {
+    color: blue;
 }
