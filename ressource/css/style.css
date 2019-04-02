@@ -23,6 +23,7 @@ h2, h3, h4 {
 	font-size: 1.5em;
 	line-height: 1em;
 }
+
 p {
 	font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
@@ -43,10 +44,11 @@ p {
 
 .bg-image {
 	grid-area: bg-img;
-	background-image: url(../image/bg.jpg);
-	background-position: top;
+	background-image: url(../image/landscape.jpg);
+	background-position: center;
+    background-color: black;
     background-size: cover;
-    /*background-size: auto 100%;*/
+/*    background-size: auto 100%;*/
     /*background-repeat: no-repeat;*/
     background-attachment: scroll, fixed;
     height: 100%;
@@ -54,15 +56,47 @@ p {
 }
 
 .bg-image h1 {
-    display: block;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1.35em;
+	font-family: 'Source Sans Pro', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2em;
     line-height: 1.75em;
-    /*margin: 0;*/
-    text-align:right;
+    display: flex;
+    justify-content: center;
+    margin-top: 8em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: block;
+    margin-top: 2em;
+    
+}
+
+.navbar ul a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    float: right;
+    margin-right: 2.5em;
+    text-decoration-line:none;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+    
+}
+
+.navbar ul a:hover {
+    color: rgba(10, 10, 224, 0.85);
 }
 
 .copyright {
+	font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
     position: absolute;
     bottom: 0;
     padding-left: 0.5rem;
@@ -81,7 +115,7 @@ p {
 
 .grid-container-content {
     display: grid;
-    grid-template-rows: 200px 1fr 200px 200px;
+    grid-template-rows: 200px 1fr 200px auto;
     grid-template-areas:    "intro"
                             "img"
                             "blog-article"
@@ -92,6 +126,7 @@ p {
 .intro {
 	grid-area: intro;
 	text-align: justify;
+    border-bottom: 1px solid rgba(120, 120, 120, 0.87);
 }
 
 .intro h2 {
@@ -103,6 +138,7 @@ p {
 
 .image-content {
     grid-area: img;
+    border-bottom: 1px solid rgba(120, 120, 120, 0.87);
 }
 
 .grid-container-img {
@@ -125,4 +161,73 @@ p {
 
 .img img p {
     color: blue;
+}
+
+/*5- BLOG ARTICLE*/
+
+.blog-article {
+    grid-area: blog-article;
+    border-bottom: 1px solid rgba(120, 120, 120, 0.87);
+}
+
+/*6- CONTACT*/
+.contact {
+    grid-area: contact;
+}
+
+.grid-container-contact {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    grid-template-rows: auto;
+    grid-template-areas:    "form adress"
+}
+
+.form {
+    grid-area: form;
+    
+}
+
+.adress ul {
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.adress ul a{
+    text-decoration: none;
+    color: #787878;
+}
+
+label {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+input[type=text], input[type=email], textarea {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.adress {
+    grid-area: adress;
 }
