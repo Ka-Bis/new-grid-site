@@ -1,0 +1,146 @@
+/* 1- GENERAL */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2, h3, h4 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 600;
+	color: #787878;
+	font-size: 2em;
+	line-height: 1em;
+}
+
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+	line-height: 1.5em;
+    color: #787878;
+}
+
+.grid-container-body {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: auto;
+	grid-template-areas: 	"bg-img content";
+	grid-column-gap: 50px;
+}
+
+/*2- BACKGROUND IMAGE*/
+
+.bg-image {
+	grid-area: bg-img;
+	background-image: url(../image/landscape.jpg);
+	background-position: center;
+    background-color: black;
+    background-size: cover;
+/*    background-size: auto 100%;*/
+    /*background-repeat: no-repeat;*/
+    background-attachment: scroll, fixed;
+    height: 100%;
+}
+
+.bg-image h1 {
+	font-family: 'Source Sans Pro', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2em;
+    line-height: 1.75em;
+    display: flex;
+    justify-content: center;
+    margin-top: 8em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: block;
+    margin-top: 2em;
+    
+}
+
+.navbar ul a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1.7em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    float: right;
+    margin-right: 2.5em;
+    
+/*
+    text-decoration:none;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px grey;
+    width: auto;
+    height: auto;
+    background-color: #148f77;
+*/
+  text-decoration:none;
+  background-color: #148f77;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0px 40px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  line-height: 2.7em;
+  font-weight: 600;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.copyright {
+	font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    color:white;
+    position: fixed;
+}
+
+/*CONTENT*/
+.content {
+    grid-area: content;
+    background-color: #fff;
+    margin-right: 10%;
+}
+
+.grid-container-content {
+    display: grid;
+    grid-template-rows: repeat(6,minmax(1fr,auto));
+    grid-template-areas:    "article1"
+                            "article2"
+                            "article3"
+                            "article4"
+                            "article5"
+                            "article6";
+    margin-top: 10%;
+}
+
+.article1 {
+    grid-area:article1;
+}
+
+.article2 {
+    grid-area:article2;
+}
+
+.article3 {
+    grid-area:article3;
+}
+
+.article4 {
+    grid-area:article4;
+}
+

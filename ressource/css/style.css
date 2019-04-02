@@ -16,9 +16,9 @@ html, body {
     padding: 0;
 }
 
-h2, h3, h4 {
+h1,h2, h3, h4 {
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
+	font-weight: 600;
 	color: #787878;
 	font-size: 1.5em;
 	line-height: 1em;
@@ -59,6 +59,7 @@ p {
 	font-family: 'Source Sans Pro', sans-serif;
     color: rgba(255, 255, 255, 0.7);
     font-size: 2em;
+/*    font-weight: 600*/
     line-height: 1.75em;
     display: flex;
     justify-content: center;
@@ -81,16 +82,32 @@ p {
     display: block;
     float: right;
     margin-right: 2.5em;
-    text-decoration-line:none;
+    
+/*
+    text-decoration:none;
     border: 1px solid white;
     border-radius: 5px;
+    box-shadow: 10px 5px 5px grey;
     width: auto;
     height: auto;
-    
-}
-
-.navbar ul a:hover {
-    color: rgba(10, 10, 224, 0.85);
+    background-color: #148f77;
+*/
+  text-decoration:none;
+  background-color: #148f77;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0px 40px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  line-height: 2.7em;
+  font-weight: 600;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .copyright {
@@ -115,12 +132,12 @@ p {
 
 .grid-container-content {
     display: grid;
-    grid-template-rows: 200px 1fr 200px auto;
+    grid-template-rows: 200px 1fr repeat(2,minmax(250px,auto));
     grid-template-areas:    "intro"
                             "img"
                             "blog-article"
                             "contact";
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .intro {
@@ -159,15 +176,28 @@ p {
     margin: auto;
 }
 
-.img img p {
-    color: blue;
-}
 
 /*5- BLOG ARTICLE*/
 
 .blog-article {
     grid-area: blog-article;
     border-bottom: 1px solid rgba(120, 120, 120, 0.87);
+}
+
+.blog-article ol {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.3em;
+}
+
+.blog-article ol a {
+    font-family: 'Source Sans Pro', sans-serif;
+/*    font-size: 1.5em;*/
+    text-decoration: none;
+    color: #1440ba;
+}
+
+.blog-article ol a:hover {
+    text-decoration: underline
 }
 
 /*6- CONTACT*/
@@ -177,7 +207,7 @@ p {
 
 .grid-container-contact {
     display: grid;
-    grid-template-columns: 60% 30%;
+    grid-template-columns: 50% 40%;
     grid-template-rows: auto;
     grid-template-areas:    "form adress"
 }
@@ -215,7 +245,7 @@ input[type=text], input[type=email], textarea {
 input[type=submit] {
     font-family: 'Source Sans Pro', sans-serif;
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #148f77;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -231,3 +261,4 @@ input[type=submit]:hover {
 .adress {
     grid-area: adress;
 }
+
