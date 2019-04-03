@@ -105,15 +105,6 @@ p {
   transition: all 0.3s;
 }
 
-.network {
-  text-align: center;
-}
-
-.network a{
-  color: black;
-  font-size: 30px;
-  padding: 0 5px;
-}
 
 .copyright {
 	font-family: 'Source Sans Pro', sans-serif;

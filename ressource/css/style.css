@@ -111,7 +111,6 @@ p {
 }
 
 .network {
-	text-align: center;
 }
 
 .network a{
@@ -273,3 +272,15 @@ input[type=submit]:hover {
     grid-area: adress;
 }
 
+@media screen and (max-width:980px) {
+	.grid-container-body {
+		grid-auto-rows: 80vh 1fr;
+		grid-template-columns: auto;
+		grid-template-areas: 	"bg-img"
+								"content";
+	}
+
+	.copyright {
+		display: none;
+	}
+}
