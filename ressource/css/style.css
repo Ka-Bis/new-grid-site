@@ -63,7 +63,7 @@ p {
     line-height: 1.75em;
     display: flex;
     justify-content: center;
-    margin-top: 8em;
+    margin-top: 6em;
 }
 
 .navbar ul {
@@ -110,6 +110,16 @@ p {
   transition: all 0.3s;
 }
 
+.network {
+	text-align: center;
+}
+
+.network a{
+	color: black;
+	font-size: 30px;
+	padding: 0 5px;
+}
+
 .copyright {
 	font-family: 'Source Sans Pro', sans-serif;
     font-weight: 500;
@@ -132,12 +142,13 @@ p {
 
 .grid-container-content {
     display: grid;
-    grid-template-rows: 200px 1fr repeat(2,minmax(250px,auto));
+    grid-template-rows: auto 1fr repeat(2,minmax(250px,auto));
     grid-template-areas:    "intro"
                             "img"
                             "blog-article"
                             "contact";
     margin-top: 10%;
+    grid-row-gap: 10px;
 }
 
 .intro {
