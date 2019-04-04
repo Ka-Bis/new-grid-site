@@ -111,11 +111,13 @@ p {
 }
 
 .network {
+	display: flex;
+	justify-content: center;
 }
 
 .network a{
 	color: black;
-	font-size: 30px;
+	font-size: 25px;
 	padding: 0 5px;
 }
 
@@ -184,6 +186,31 @@ p {
     width: 80%;
     border-radius: 10px; 
     margin: auto;
+}
+
+
+.img1 {
+	grid-area: img1;
+}
+
+.img2 {
+	grid-area: img2;
+}
+
+.img3 {
+	grid-area: img3;
+}
+
+.img4 {
+	grid-area: img4;
+}
+
+.img5 {
+	grid-area: img5;
+}
+
+.img6 {
+	grid-area: img6;
 }
 
 
@@ -272,7 +299,7 @@ input[type=submit]:hover {
     grid-area: adress;
 }
 
-@media screen and (max-width:980px) {
+@media screen and (max-width:1250px) {
 	.grid-container-body {
 		grid-auto-rows: 80vh 1fr;
 		grid-template-columns: auto;
@@ -280,7 +307,19 @@ input[type=submit]:hover {
 								"content";
 	}
 
-	.copyright {
+	.copyright, .txt {
 		display: none;
+		overflow: hidden;
 	}
+
+	.grid-container-img {
+    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: auto;
+    grid-template-areas: 	"img1"
+    						"img2"
+    						"img3"
+    						"img4"
+    						"img5"
+    						"img6";
+}
 }

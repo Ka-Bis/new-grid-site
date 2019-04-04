@@ -1,0 +1,22 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container-body {
+
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+	grid-template-columns: auto;
+	grid-template-areas:	 "img-page"
+							 "content-page";
+}
+
+.img-page {
+	grid-area: img-page;
+	background-image: url(../image/market.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 60vh;
+}

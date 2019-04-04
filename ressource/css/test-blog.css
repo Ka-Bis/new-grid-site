@@ -6,11 +6,11 @@ html, body {
 }
 
 h1,h2, h3, h4 {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 600;
-	color: #787878;
-	font-size: 2em;
-	line-height: 1em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  color: #787878;
+  font-size: 2em;
+  line-height: 1em;
 }
 
 h1 a {
@@ -22,7 +22,7 @@ a {
 }
 
 p {
-	font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.5em;
@@ -30,29 +30,28 @@ p {
 }
 
 .grid-container-body {
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	grid-template-rows: auto;
-	grid-template-areas: 	"bg-img content";
-	grid-column-gap: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas:  "bg-img content";
+  grid-column-gap: 50px;
 }
 
 /*2- BACKGROUND IMAGE*/
 
 .bg-image {
-	grid-area: bg-img;
-	background-image: url(../image/landscape.jpg);
-	background-position: center;
+  grid-area: bg-img;
+  background-image: url(../image/landscape.jpg);
+  background-position: center;
     background-color: black;
     background-size: cover;
 /*    background-size: auto 100%;*/
     /*background-repeat: no-repeat;*/
     background-attachment: scroll, fixed;
-    height: 100%;
 }
 
 .bg-image h1 {
-	font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
     color: rgba(255, 255, 255, 0.7);
     font-size: 2em;
     line-height: 1.75em;
@@ -107,7 +106,7 @@ p {
 
 
 .copyright {
-	font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
     font-weight: 500;
     font-size: 1rem;
     position: absolute;
@@ -134,21 +133,117 @@ p {
                             "article4"
                             "article5"
                             "article6";
-    margin-top: 10%;
+    margin-top: 10%;  
+    grid-row-gap: 50px;
 }
 
+.border {
+  border: 3px outset rgb(186, 29, 114);
+  width: auto;
+  height: auto;
+}
+
+ /* ARTICLE 1*/
 .article1 {
     grid-area:article1;
 }
 
+.grid-article1{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  grid-template-areas:  "col1 col2 col3";
+  grid-column-gap: 20px;
+}
+
+.img-laos1, .img-vtnam, .img-thai {
+  width: 100%;
+}
+.col {
+  text-align: center;
+}
+
+.col p {
+  text-align: justify;
+  padding: 10px;
+}
+
+.col a {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: blue;
+  text-decoration: none;
+}
+
+.col1 {
+  grid-area: col1;
+}
+
+.col2 {
+  grid-area: col2;
+  margin-top: 50px;
+}
+
+.col3 {
+  grid-area: col3;
+}
+
+
+/*ARTICLE 2 */
 .article2 {
     grid-area:article2;
 }
 
+.grid-article2 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  grid-template-areas:  "col4 col5 col6";
+  grid-column-gap: 20px;
+}
+
+.col4 {
+  grid-area: col4;
+  margin-top: 50px;
+}
+
+.col5 {
+  grid-area: col5;
+}
+
+.col6 {
+  grid-area: col6;
+  margin-top: 50px;
+}
+
+
+/*ARTICLE 3 */
 .article3 {
     grid-area:article3;
 }
 
+.grid-article3 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  grid-template-areas:  "col7 col8 col9";
+  grid-column-gap: 20px;
+}
+
+.col7 {
+  grid-area: col7;
+  margin-top: 50px;
+}
+
+.col8 {
+  grid-area: col8;
+}
+
+.col9 {
+  grid-area: col9;
+  margin-top: 50px;
+}
+
+/*ARTICLE 4*/
 .article4 {
     grid-area:article4;
 }
