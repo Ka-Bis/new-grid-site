@@ -40,9 +40,9 @@ p {
 /*2- BACKGROUND IMAGE*/
 
 .bg-image {
-  grid-area: bg-img;
-  background-image: url(../image/landscape.jpg);
-  background-position: center;
+    grid-area: bg-img;
+    background-image: url(../image/silouhette-photo.jpeg);
+    background-position: center;
     background-color: black;
     background-size: cover;
 /*    background-size: auto 100%;*/
@@ -134,16 +134,51 @@ p {
                             "article5"
                             "article6";
     margin-top: 10%;  
-    grid-row-gap: 50px;
+    grid-row-gap: 30px;
+    margin-bottom: 30px;
+}
+
+.article h2::after {
+    display: block;
+    height: 2px;
+    background-color: #bf1414;
+    width: 100px;
+    content: "";
+/*    margin: auto;*/
+    margin-top: 10px;
 }
 
 .border {
-  border: 3px outset rgb(186, 29, 114);
+  border: 3px outset rgba(168, 23, 102, 0.84);
   width: auto;
   height: auto;
 }
 
- /* ARTICLE 1*/
+.img-laos1, .img-vtnam, .img-thai {
+  width: 100%;
+}
+
+.col {
+  text-align: center;
+}
+
+.col p {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: justify;
+    padding: 10px;
+}
+
+.col a {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: blue;
+  text-decoration: none;
+}
+
+.mtop {
+    margin-top: 50px;
+}
+
+ /* ARTICLE 1 LAOS*/
 .article1 {
     grid-area:article1;
 }
@@ -156,31 +191,12 @@ p {
   grid-column-gap: 20px;
 }
 
-.img-laos1, .img-vtnam, .img-thai {
-  width: 100%;
-}
-.col {
-  text-align: center;
-}
-
-.col p {
-  text-align: justify;
-  padding: 10px;
-}
-
-.col a {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: blue;
-  text-decoration: none;
-}
-
 .col1 {
   grid-area: col1;
 }
 
 .col2 {
   grid-area: col2;
-  margin-top: 50px;
 }
 
 .col3 {
@@ -188,7 +204,7 @@ p {
 }
 
 
-/*ARTICLE 2 */
+/*ARTICLE 2 VIETNAM */
 .article2 {
     grid-area:article2;
 }
@@ -203,7 +219,6 @@ p {
 
 .col4 {
   grid-area: col4;
-  margin-top: 50px;
 }
 
 .col5 {
@@ -212,11 +227,10 @@ p {
 
 .col6 {
   grid-area: col6;
-  margin-top: 50px;
 }
 
 
-/*ARTICLE 3 */
+/*ARTICLE 3 THAILANDE*/
 .article3 {
     grid-area:article3;
 }
@@ -231,7 +245,6 @@ p {
 
 .col7 {
   grid-area: col7;
-  margin-top: 50px;
 }
 
 .col8 {
@@ -240,19 +253,80 @@ p {
 
 .col9 {
   grid-area: col9;
-  margin-top: 50px;
 }
 
-/*ARTICLE 4*/
+/*ARTICLE 4 JAPON*/
 .article4 {
     grid-area:article4;
 }
 
+.grid-article4 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+  grid-template-areas:  "col10 col11 col12";
+  grid-column-gap: 20px;
+}
+
+.col10 {
+  grid-area: col10;
+}
+
+.col11 {
+  grid-area: col11;
+}
+
+.col12 {
+  grid-area: col12;
+}
+
+/*ARTICLE 5 CHINE*/
 .article5 {
     grid-area:article5;
 }
 
+.grid-article5 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-template-areas:  "col13 col14 col15";
+    grid-column-gap: 20px;
+}
+
+.col13 {
+    grid-area: col13;
+}
+
+.col14 {
+    grid-area: col14;
+}
+
+.col15 {
+    grid-area: col15;
+}
+
+/*ARTICLE 6 SINGAPOUR*/
 .article6 {
     grid-area:article6;
 }
 
+.grid-article6 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-template-areas:  "col16 col17 col18";
+    grid-column-gap: 20px;
+}
+
+
+.col16 {
+    grid-area: col16;
+}
+
+.col17 {
+    grid-area: col17;
+}
+
+.col18 {
+    grid-area: col18;
+}
