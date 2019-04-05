@@ -41,7 +41,7 @@ p {
 
 .bg-image {
     grid-area: bg-img;
-    background-image: url(../image/silouhette-photo.jpeg);
+    background-image: url(../image/bridge.jpg);
     background-position: center;
     background-color: black;
     background-size: cover;
@@ -133,8 +133,10 @@ p {
                             "article4"
                             "article5"
                             "article6";
-    margin-top: 10%;  
     grid-row-gap: 30px;
+    /*margin-top: 10%;  
+    margin-bottom: 30px;*/
+    margin: 10% 30px auto;
     margin-bottom: 30px;
 }
 
@@ -149,12 +151,12 @@ p {
 }
 
 .border {
-  border: 3px outset rgba(168, 23, 102, 0.84);
+  border: 3px outset rgba(180, 74, 18, 0.88);
   width: auto;
   height: auto;
 }
 
-.img-laos1, .img-vtnam, .img-thai {
+.img-article {
   width: 100%;
 }
 
@@ -329,4 +331,85 @@ p {
 
 .col18 {
     grid-area: col18;
+}
+
+
+@media screen and (max-width:1300px) {
+    .grid-container-body {
+        grid-template-rows: 80vh 1fr;
+        grid-template-columns: auto;
+        grid-template-areas:     "bg-img"
+                                 "content";
+        grid-row-gap: 20px;
+    }
+    
+    .copyright {
+		display: none;
+		overflow: hidden;
+	}
+    .mtop {
+    margin-top: 0;
+}
+    .grid-article1 {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3,1fr);
+      grid-template-areas:  "col1"
+                            "col2"
+                            "col3";
+      grid-row-gap: 20px;
+    }
+    
+    .grid-article2 {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3,1fr);
+      grid-template-areas:  "col4"
+                            "col5"
+                            "col6";
+      grid-row-gap: 20px;
+    }
+    
+    .grid-article3 {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3,1fr);
+      grid-template-areas:  "col7"
+                            "col8"
+                            "col9";
+      grid-row-gap: 20px;
+    }
+    
+    .grid-article4 {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3,1fr);
+      grid-template-areas:  "col10"
+                            "col11"
+                            "col12";
+      grid-row-gap: 20px;
+    }
+    
+    .grid-article5 {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3,1fr);
+      grid-template-areas:  "col13"
+                            "col14"
+                            "col15";
+      grid-row-gap: 20px;
+    }
+    
+    .grid-article6 {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3,1fr);
+      grid-template-areas:  "col16"
+                            "col17"
+                            "col18";
+      grid-row-gap: 20px;
+    }
+    
+
+    
 }

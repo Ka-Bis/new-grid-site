@@ -299,14 +299,14 @@ input[type=submit]:hover {
     grid-area: adress;
 }
 
-@media screen and (max-width:1250px) {
+@media screen and (max-width:1300px) {
 	.grid-container-body {
-		grid-auto-rows: 80vh 1fr;
+		grid-template-rows: 80vh 1fr;
 		grid-template-columns: auto;
 		grid-template-areas: 	"bg-img"
 								"content";
 	}
-
+        
 	.copyright, .txt {
 		display: none;
 		overflow: hidden;

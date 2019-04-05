@@ -2,6 +2,41 @@ html, body {
     margin: 0;
     padding: 0;
 }
+h1 {
+	font-family: 'Source Sans Pro', sans-serif;
+	color:white;
+	font-size: 60px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+h2 {
+	padding: 10px;
+}
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #bf1414;
+    width: 100px;
+    content: "";
+/*    margin: auto;*/
+    margin-top: 10px;
+}
+
+p {
+	padding: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.retour {
+    font-family: 'Source Sans Pro', sans-serif;.3
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    padding-top: 10px
+}
 
 .grid-container-body {
 
@@ -10,13 +45,101 @@ html, body {
 	grid-template-columns: auto;
 	grid-template-areas:	 "img-page"
 							 "content-page";
+	grid-row-gap: 10px;
 }
 
 .img-page {
 	grid-area: img-page;
-	background-image: url(../image/market.jpg);
-	background-position: center;
+	background-image: url(../image/floating-market.jpg);
+	background-position: bottom;
 	background-size: cover;
 	background-attachment: fixed;
 	height: 60vh;
+}
+
+.grid-content-page {
+	display: grid;
+	grid-template-rows: 2fr auto;
+	grid-template-columns: auto;
+	grid-template-areas: 	"part1"
+							"part2";
+
+}
+
+.part1 {
+	grid-area: part1;
+}
+
+.grid-part1 {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: auto;
+	grid-template-areas:	"title1 title2";
+	grid-column-gap: 30px;
+}
+
+.img-food {
+	display: block;
+	margin: auto;
+	width: 60%;
+}
+
+.img-activity {
+	display: block;
+	margin: auto;
+	width: 40%;
+}
+
+.kid-boxe {
+	float: left;
+    width: 30%;
+}
+.title1 {
+	grid-area: title1;
+	border-right: 1px solid black;
+}
+
+.title2 {
+	grid-area: title2;
+}
+
+
+
+.part2 {
+	grid-area: part2;
+}
+
+.grid-part2  {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 	"title3 title4";
+	grid-column-gap: 30px;
+}
+
+.title3 {
+	grid-area: title3;
+}
+
+.img-monument {
+    width: 40%;
+    float: right;
+}
+
+.temple {
+	float: none;
+}
+
+.title4 {
+	grid-area: title4;
+}
+
+.img-party {
+	width: 50%;
+	display: block;
+	margin:auto;
+}
+
+.cherry {
+    float:left; 
 }
